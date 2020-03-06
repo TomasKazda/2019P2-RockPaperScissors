@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace _2019P2_RockPaperScissors
+namespace P2RockPaperScissors
 {
     public class Program
     {

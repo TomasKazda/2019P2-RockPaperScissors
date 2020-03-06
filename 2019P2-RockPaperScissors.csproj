@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_2019P2_RockPaperScissors</RootNamespace>
+    <RootNamespace>P2RockPaperScissors</RootNamespace>
+    <AssemblyName>RockPaperScissors</AssemblyName>
   </PropertyGroup>
 
 

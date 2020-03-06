@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace _2019P2_RockPaperScissors.Pages
+namespace P2RockPaperScissors.Pages
 {
     public class PrivacyModel : PageModel
     {
