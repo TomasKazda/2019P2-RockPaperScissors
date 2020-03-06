@@ -11,5 +11,7 @@ namespace P2RockPaperScissors.Model
         public int WinCounter { get; set; }
         public int LossCounter { get; set; }
         public int DrawCounter { get; set; }
+        public RpsMode AiChoice { get; set; }
+        public RpsMode UserChoice { get; set; }
     }
 }

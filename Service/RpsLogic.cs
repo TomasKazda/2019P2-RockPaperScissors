@@ -20,7 +20,11 @@ namespace P2RockPaperScissors.Service
 
         public void GameRound(RpsMode userChoice)
         {
+            if (userChoice == RpsMode.None) return;
+
             RpsMode aiChoice = (RpsMode)random.Next(1, 4);
+            UserData.AiChoice = aiChoice;
+            UserData.UserChoice = userChoice;
 
             if (aiChoice == RpsMode.Rock && userChoice == RpsMode.Paper ||
                 aiChoice == RpsMode.Paper && userChoice == RpsMode.Scissors ||

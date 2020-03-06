@@ -35,9 +35,7 @@ namespace P2RockPaperScissors.Pages
         }
 
         public void OnPost()
-        {
-            GameData = new Rps();
-            
+        {            
             if (this.ModelState.IsValid)
             {
                 _rpsLogic.UserData = GameData;

@@ -8,9 +8,7 @@
     <div class="text-center">
         <h1 class="display-4">Kámen nůžky papír</h1>
 
-        <p>Win: @Model.GameData.WinCounter</p>
-        <p>Loss: @Model.GameData.LossCounter</p>
-        <p>Draw: @Model.GameData.DrawCounter</p>
+        <p>Win: @Model.GameData.WinCounter | Loss: @Model.GameData.LossCounter | Draw: @Model.GameData.DrawCounter</p>
 
         <form method="post">
             <input type="hidden" asp-for="GameData.WinCounter" value="@Model.GameData.WinCounter" />
@@ -21,4 +19,14 @@
             <input type="radio" asp-for="UserChoice" value="@RpsMode.Paper" />Papír<br />
             <input type="submit" value="Hraj!" />
         </form>
+
+        <div>
+            @if (Model.UserChoice != RpsMode.None)
+            {
+                <span>
+                    @Html.DisplayFor((x) => x.GameData.UserChoice) vs
+                    @Html.DisplayFor((x) => x.GameData.AiChoice)
+                </span>
+            }
+        </div>
     </div>
