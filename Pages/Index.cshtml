@@ -5,16 +5,20 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Kámen nůžky papír</h1>
+    <div class="text-center">
+        <h1 class="display-4">Kámen nůžky papír</h1>
 
-    <p>@Model.GameData.WinCounter</p>
+        <p>Win: @Model.GameData.WinCounter</p>
+        <p>Loss: @Model.GameData.LossCounter</p>
+        <p>Draw: @Model.GameData.DrawCounter</p>
 
-    <form method="post">
-        <input type="hidden" asp-for="GameData.WinCounter" value="@Model.GameData.WinCounter" />
-        <input type="radio" asp-for="UserChoice" value="@RpsMode.Rock" />Kámen<br />
-        <input type="radio" asp-for="UserChoice" value="@RpsMode.Scissors" />Nůžky<br />
-        <input type="radio" asp-for="UserChoice" value="@RpsMode.Paper" />Papír<br />
-        <input type="submit" value="Hraj!" />
-    </form>
-</div>
+        <form method="post">
+            <input type="hidden" asp-for="GameData.WinCounter" value="@Model.GameData.WinCounter" />
+            <input type="hidden" asp-for="GameData.LossCounter" value="@Model.GameData.LossCounter" />
+            <input type="hidden" asp-for="GameData.DrawCounter" value="@Model.GameData.DrawCounter" />
+            <input type="radio" asp-for="UserChoice" value="@RpsMode.Rock" />Kámen<br />
+            <input type="radio" asp-for="UserChoice" value="@RpsMode.Scissors" />Nůžky<br />
+            <input type="radio" asp-for="UserChoice" value="@RpsMode.Paper" />Papír<br />
+            <input type="submit" value="Hraj!" />
+        </form>
+    </div>

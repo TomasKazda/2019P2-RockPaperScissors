@@ -31,18 +31,17 @@ namespace P2RockPaperScissors.Pages
         public void OnGet()
         {
             Message = "Začíná hra pravidla jsou ... ty znáš :-)";
-            GameData = _rpsLogic.userData;
+            GameData = _rpsLogic.UserData;
         }
 
         public void OnPost()
         {
             GameData = new Rps();
-
+            
             if (this.ModelState.IsValid)
             {
-                _rpsLogic.userData.IsWinner = GameData.IsWinner;
+                _rpsLogic.UserData = GameData;
                 _rpsLogic.GameRound(UserChoice);
-                GameData = _rpsLogic.userData;
             }
             
         }

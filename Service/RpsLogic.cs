@@ -13,10 +13,10 @@ namespace P2RockPaperScissors.Service
         public RpsLogic(Random random)
         {
             this.random = random;
-            userData = new Rps();
+            UserData = new Rps();
         }
 
-        public Rps userData { get; set; }
+        public Rps UserData { get; set; }
 
         public void GameRound(RpsMode userChoice)
         {
@@ -26,18 +26,18 @@ namespace P2RockPaperScissors.Service
                 aiChoice == RpsMode.Paper && userChoice == RpsMode.Scissors ||
                 aiChoice == RpsMode.Scissors && userChoice == RpsMode.Rock)
             {
-                userData.WinCounter++;
-                userData.IsWinner = true;
+                UserData.WinCounter++;
+                UserData.IsWinner = true;
             }
             else if (aiChoice == userChoice)
             {
-                userData.DrawCounter++;
-                userData.IsWinner = null;
+                UserData.DrawCounter++;
+                UserData.IsWinner = null;
             }
             else
             {
-                userData.LossCounter++;
-                userData.IsWinner = false;
+                UserData.LossCounter++;
+                UserData.IsWinner = false;
             }
         }
     }
