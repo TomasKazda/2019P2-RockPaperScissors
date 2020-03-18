@@ -40,6 +40,13 @@ namespace P2RockPaperScissors.Pages
             {
                 _rpsLogic.UserData = GameData;
                 _rpsLogic.GameRound(UserChoice);
+
+                Message = _rpsLogic.UserData.IsWinner switch
+                {
+                    true => "Vyhrál člověk",
+                    false => "Vyhrál počítač",
+                    null => "Je to remíza"
+                };
             }
             
         }

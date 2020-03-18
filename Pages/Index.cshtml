@@ -23,10 +23,14 @@
         <div>
             @if (Model.UserChoice != RpsMode.None)
             {
-                <span>
+                <p>
                     @Html.DisplayFor((x) => x.GameData.UserChoice) vs
                     @Html.DisplayFor((x) => x.GameData.AiChoice)
-                </span>
+                </p>
+
+                <p class="alert alert-info">
+                    @Model.Message
+                </p>
             }
         </div>
     </div>
